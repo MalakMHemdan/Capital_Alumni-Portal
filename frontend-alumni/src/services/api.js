@@ -6,7 +6,7 @@ const API = axios.create({
   baseURL: process.env.REACT_APP_BACKEND_URL || "/alumni-portal",
   withCredentials: true,
 });
-
+console.log(process.env.REACT_APP_BACKEND_URL);
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
